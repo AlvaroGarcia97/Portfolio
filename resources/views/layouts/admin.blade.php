@@ -25,6 +25,7 @@
                             ['route' => 'admin.dashboard', 'label' => 'Inicio'],
                             ['route' => 'admin.projects.index', 'label' => 'Proyectos'],
                             ['route' => 'admin.messages.index', 'label' => 'Mensajes'],
+                            ['route' => 'admin.password.edit', 'label' => 'Contraseña'],
                         ];
                     @endphp
 

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\PasswordController;
 use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
@@ -36,4 +37,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('mensajes', [MessageController::class, 'index'])->name('messages.index');
     Route::get('mensajes/{message}', [MessageController::class, 'show'])->name('messages.show');
     Route::delete('mensajes/{message}', [MessageController::class, 'destroy'])->name('messages.destroy');
+
+    Route::get('password', [PasswordController::class, 'edit'])->name('password.edit');
+    Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 });

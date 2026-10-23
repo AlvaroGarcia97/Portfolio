@@ -31,8 +31,8 @@ de contacto.
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/AlvaroGarcia97/portfolio.git
-cd portfolio
+git clone https://github.com/AlvaroGarcia97/Portfolio.git
+cd Portfolio
 
 # 2. Instalar dependencias
 composer install
@@ -58,7 +58,8 @@ La web estará disponible en `http://localhost:8000`.
 
 - **URL:** `/login`
 - Las credenciales del usuario administrador se crean con el seeder
-  `AdminUserSeeder`. **Cámbialas antes de publicar en producción.**
+  `AdminUserSeeder`, leyendo `ADMIN_EMAIL` y `ADMIN_PASSWORD` del `.env`
+  (si no las defines, usa las de ejemplo). **Cámbialas antes de publicar en producción.**
 
 ## 📁 Estructura del proyecto
 

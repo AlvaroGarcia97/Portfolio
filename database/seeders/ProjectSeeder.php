@@ -12,11 +12,11 @@ class ProjectSeeder extends Seeder
     {
         $projects = [
             [
-                'title' => 'Portfolio personal',
-                'summary' => 'Web de portfolio con panel de administración para gestionar proyectos y recibir mensajes de contacto.',
-                'body' => 'Aplicación desarrollada con Laravel que sirve como escaparate profesional. Incluye un panel de administración protegido con autenticación, CRUD completo de proyectos y una bandeja de entrada para los mensajes del formulario de contacto.',
-                'tech_stack' => ['Laravel', 'PHP', 'Blade', 'Tailwind CSS', 'MySQL'],
-                'repo_url' => 'https://github.com/AlvaroGarcia97',
+                'title' => 'Spotify Stats',
+                'summary' => 'Estadísticas de tu Spotify y generador de playlists con tus artistas y canciones top.',
+                'body' => 'Aplicación Laravel que se conecta a Spotify mediante OAuth 2.0. Muestra tus artistas y canciones más escuchados por periodo y genera playlists a partir de ellos, guardando un historial en base de datos.',
+                'tech_stack' => ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'Spotify API'],
+                'repo_url' => 'https://github.com/AlvaroGarcia97/spotify-stats',
                 'demo_url' => null,
                 'featured' => true,
                 'sort_order' => 1,
@@ -38,7 +38,7 @@ class ProjectSeeder extends Seeder
                 'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST'],
                 'repo_url' => 'https://github.com/AlvaroGarcia97',
                 'demo_url' => null,
-                'featured' => true,
+                'featured' => false,
                 'sort_order' => 3,
             ],
             [
@@ -48,8 +48,18 @@ class ProjectSeeder extends Seeder
                 'tech_stack' => ['Angular', 'TypeScript', 'HTML', 'CSS'],
                 'repo_url' => 'https://github.com/AlvaroGarcia97',
                 'demo_url' => null,
-                'featured' => false,
+                'featured' => true,
                 'sort_order' => 4,
+            ],
+            [
+                'title' => 'Palomitas & Pixeles',
+                'summary' => 'Club de cine con buscador, lista de películas, ruleta y juego para adivinar películas.',
+                'body' => 'Aplicación Laravel con autenticación propia y consumo de la API de TMDB. Permite buscar películas, guardarlas como pendientes o vistas, puntuarlas y reseñarlas. Incluye una ruleta para elegir qué ver y un juego de 10 rondas para adivinar la película por su carátula, con puntuación guardada.',
+                'tech_stack' => ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'TMDB API'],
+                'repo_url' => 'https://github.com/AlvaroGarcia97/palomitas-pixeles',
+                'demo_url' => null,
+                'featured' => true,
+                'sort_order' => 5,
             ],
         ];
 
