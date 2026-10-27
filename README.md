@@ -4,9 +4,9 @@ Web de portfolio profesional desarrollada con **Laravel** que incluye un panel d
 administración para gestionar los proyectos y recibir los mensajes del formulario
 de contacto.
 
-> 🚧 Demo en vivo: _(pendiente de desplegar)_
+> Demo en vivo: _(pendiente de desplegar)_
 
-## ✨ Características
+## Características
 
 - **Sitio público**
   - Página de inicio con presentación, tecnologías y proyectos destacados.
@@ -20,14 +20,14 @@ de contacto.
   - CRUD completo de proyectos (crear, editar, eliminar, destacar, publicar).
   - Bandeja de entrada de mensajes con contador de no leídos.
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Backend:** PHP 8.3, Laravel 13
 - **Frontend:** Blade, Tailwind CSS 4, Vite
 - **Base de datos:** SQLite (desarrollo) / MySQL (producción)
 - **Herramientas:** Composer, npm, Git
 
-## 🚀 Instalación local
+## Instalación local
 
 ```bash
 # 1. Clonar el repositorio
@@ -54,14 +54,14 @@ php artisan serve
 
 La web estará disponible en `http://localhost:8000`.
 
-## 🔑 Acceso al panel de administración
+## Acceso al panel de administración
 
 - **URL:** `/login`
 - Las credenciales del usuario administrador se crean con el seeder
   `AdminUserSeeder`, leyendo `ADMIN_EMAIL` y `ADMIN_PASSWORD` del `.env`
   (si no las defines, usa las de ejemplo). **Cámbialas antes de publicar en producción.**
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 app/
@@ -92,6 +92,6 @@ resources/views/
 └── admin/                           # Panel de administración
 ```
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de uso personal. El código está disponible bajo licencia MIT.
