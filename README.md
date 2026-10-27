@@ -1,33 +1,33 @@
-# Portfolio personal — Álvaro García Sangüesa
+# Portfolio personal  lvaro Garca Sangesa
 
 Web de portfolio profesional desarrollada con **Laravel** que incluye un panel de
-administración para gestionar los proyectos y recibir los mensajes del formulario
+administracin para gestionar los proyectos y recibir los mensajes del formulario
 de contacto.
 
 > Demo en vivo: _(pendiente de desplegar)_
 
-## Características
+## Caractersticas
 
-- **Sitio público**
-  - Página de inicio con presentación, tecnologías y proyectos destacados.
-  - Listado de proyectos y página de detalle de cada uno.
-  - Sección "Sobre mí".
+- **Sitio pblico**
+  - Pgina de inicio con presentacin, tecnologas y proyectos destacados.
+  - Listado de proyectos y pgina de detalle de cada uno.
+  - Seccin "Sobre m".
   - Formulario de contacto que guarda los mensajes en la base de datos.
 
-- **Panel de administración** (protegido con autenticación)
+- **Panel de administracin** (protegido con autenticacin)
   - Login seguro.
-  - Dashboard con estadísticas y últimos mensajes.
+  - Dashboard con estadsticas y ltimos mensajes.
   - CRUD completo de proyectos (crear, editar, eliminar, destacar, publicar).
-  - Bandeja de entrada de mensajes con contador de no leídos.
+  - Bandeja de entrada de mensajes con contador de no ledos.
 
-## Tecnologías
+## Tecnologas
 
 - **Backend:** PHP 8.3, Laravel 13
 - **Frontend:** Blade, Tailwind CSS 4, Vite
-- **Base de datos:** SQLite (desarrollo) / MySQL (producción)
+- **Base de datos:** SQLite (desarrollo) / MySQL (produccin)
 - **Herramientas:** Composer, npm, Git
 
-## Instalación local
+## Instalacin local
 
 ```bash
 # 1. Clonar el repositorio
@@ -52,46 +52,46 @@ npm run build
 php artisan serve
 ```
 
-La web estará disponible en `http://localhost:8000`.
+La web estar disponible en `http://localhost:8000`.
 
-## Acceso al panel de administración
+## Acceso al panel de administracin
 
 - **URL:** `/login`
 - Las credenciales del usuario administrador se crean con el seeder
   `AdminUserSeeder`, leyendo `ADMIN_EMAIL` y `ADMIN_PASSWORD` del `.env`
-  (si no las defines, usa las de ejemplo). **Cámbialas antes de publicar en producción.**
+  (si no las defines, usa las de ejemplo). **Cmbialas antes de publicar en produccin.**
 
 ## Estructura del proyecto
 
 ```
 app/
-├── Http/Controllers/
-│   ├── HomeController.php          # Página de inicio
-│   ├── ProjectController.php       # Proyectos (público)
-│   ├── ContactController.php       # Formulario de contacto
-│   ├── AuthController.php          # Login / logout
-│   └── Admin/                       # Panel de administración
-│       ├── DashboardController.php
-│       ├── ProjectController.php    # CRUD de proyectos
-│       └── MessageController.php    # Bandeja de mensajes
-└── Models/
-    ├── Project.php
-    └── Message.php
+ Http/Controllers/
+    HomeController.php          # Pgina de inicio
+    ProjectController.php       # Proyectos (pblico)
+    ContactController.php       # Formulario de contacto
+    AuthController.php          # Login / logout
+    Admin/                       # Panel de administracin
+        DashboardController.php
+        ProjectController.php    # CRUD de proyectos
+        MessageController.php    # Bandeja de mensajes
+ Models/
+     Project.php
+     Message.php
 
 database/
-├── migrations/                      # Estructura de la base de datos
-└── seeders/                         # Usuario admin y proyectos de ejemplo
+ migrations/                      # Estructura de la base de datos
+ seeders/                         # Usuario admin y proyectos de ejemplo
 
 resources/views/
-├── layouts/                         # Plantillas base
-├── home.blade.php
-├── about.blade.php
-├── contact.blade.php
-├── projects/                        # Listado y detalle
-├── auth/                            # Login
-└── admin/                           # Panel de administración
+ layouts/                         # Plantillas base
+ home.blade.php
+ about.blade.php
+ contact.blade.php
+ projects/                        # Listado y detalle
+ auth/                            # Login
+ admin/                           # Panel de administracin
 ```
 
 ## Licencia
 
-Este proyecto es de uso personal. El código está disponible bajo licencia MIT.
+Este proyecto es de uso personal. El cdigo est disponible bajo licencia MIT.
