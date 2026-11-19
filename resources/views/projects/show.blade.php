@@ -4,41 +4,41 @@
 @section('meta_description', $project->summary)
 
 @section('content')
-    <section class="mx-auto max-w-4xl px-6 py-16">
-        <a href="{{ route('projects.index') }}" class="text-sm text-slate-400 transition hover:text-white">← Volver a proyectos</a>
+    <section class="mx-auto max-w-4xl px-6 py-20">
+        <a href="{{ route('projects.index') }}" class="text-sm text-ink/60 transition hover:text-ink">← Volver a proyectos</a>
 
-        <header class="mt-6">
-            <h1 class="text-3xl font-bold text-white sm:text-4xl">{{ $project->title }}</h1>
-            <p class="mt-3 text-lg text-slate-400">{{ $project->summary }}</p>
+        <header class="mt-8">
+            <h1 class="titulo-gigante titulo-gigante--seccion">{{ $project->title }}</h1>
+            <p class="mt-4 text-lg text-ink/60">{{ $project->summary }}</p>
         </header>
 
         @if ($project->image)
-            <img src="{{ $project->image }}" alt="{{ $project->title }}" class="mt-8 w-full rounded-2xl border border-white/10 object-cover">
+            <img src="{{ $project->image }}" alt="{{ $project->title }}" class="mt-10 w-full rounded-2xl border border-ink/10 object-cover">
         @endif
 
         @if (! empty($project->tech_stack))
             <ul class="mt-8 flex flex-wrap gap-2">
                 @foreach ($project->tech_stack as $tech)
-                    <li class="rounded-full bg-indigo-500/10 px-3 py-1 text-sm text-indigo-300">{{ $tech }}</li>
+                    <li class="rounded-full bg-mist/40 px-3 py-1 text-sm text-ink">{{ $tech }}</li>
                 @endforeach
             </ul>
         @endif
 
         <div class="mt-8 flex flex-wrap gap-3">
             @if ($project->demo_url)
-                <a href="{{ $project->demo_url }}" target="_blank" rel="noopener" class="rounded-xl bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400">
+                <a href="{{ $project->demo_url }}" target="_blank" rel="noopener" class="rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-ink/90">
                     Ver demo
                 </a>
             @endif
             @if ($project->repo_url)
-                <a href="{{ $project->repo_url }}" target="_blank" rel="noopener" class="rounded-xl border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:bg-white/5">
+                <a href="{{ $project->repo_url }}" target="_blank" rel="noopener" class="rounded-xl border border-ink/20 px-5 py-2.5 text-sm font-semibold text-ink transition hover:bg-mist/40">
                     Código en GitHub
                 </a>
             @endif
         </div>
 
         @if ($project->body)
-            <div class="mt-10 leading-relaxed text-slate-300">
+            <div class="mt-10 leading-relaxed text-ink/70">
                 {!! nl2br(e($project->body)) !!}
             </div>
         @endif
@@ -46,8 +46,8 @@
 
     @if ($others->isNotEmpty())
         <section class="mx-auto max-w-6xl px-6 pb-20">
-            <h2 class="mb-6 text-xl font-semibold text-white">Otros proyectos</h2>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <h2 class="text-2xl font-bold uppercase tracking-widest">Otros proyectos</h2>
+            <div class="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-12">
                 @foreach ($others as $other)
                     @include('projects._card', ['project' => $other])
                 @endforeach

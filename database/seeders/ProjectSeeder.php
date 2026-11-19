@@ -13,6 +13,7 @@ class ProjectSeeder extends Seeder
         $projects = [
             [
                 'title' => 'Spotify Stats',
+                'image' => '/images/vecteezy_spotify-logo-square-rounded-spotify-logo-spotify-logo-free_55138452.png',
                 'summary' => 'Estadísticas de tu Spotify y generador de playlists con tus artistas y canciones top.',
                 'body' => 'Aplicación Laravel que se conecta a Spotify mediante OAuth 2.0. Muestra tus artistas y canciones más escuchados por periodo y genera playlists a partir de ellos, guardando un historial en base de datos.',
                 'tech_stack' => ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'Spotify API'],
@@ -23,6 +24,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'Gestor de Biblioteca',
+                'published' => false,
                 'summary' => 'Aplicación de escritorio para gestionar préstamos y catálogo de una biblioteca.',
                 'body' => 'Proyecto de primer año desarrollado en Java. Permite dar de alta socios, libros y gestionar préstamos y devoluciones con persistencia en base de datos relacional.',
                 'tech_stack' => ['Java', 'JavaFX', 'MySQL'],
@@ -33,6 +35,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'API REST de Pedidos',
+                'published' => false,
                 'summary' => 'API REST para gestionar pedidos y stock con autenticación por token.',
                 'body' => 'Backend en Laravel que expone endpoints REST para clientes, productos y pedidos. Incluye autenticación, validación de datos y documentación de los endpoints.',
                 'tech_stack' => ['Laravel', 'PHP', 'MySQL', 'REST'],
@@ -43,6 +46,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'Panel de tareas con Angular',
+                'image' => '/images/panel-tareas.jpg',
                 'summary' => 'SPA para organizar tareas y proyectos consumiendo una API REST.',
                 'body' => 'Aplicación frontend desarrollada con Angular y TypeScript. Consume una API REST, gestiona el estado de la interfaz y ofrece una experiencia de usuario dinámica sin recargar la página.',
                 'tech_stack' => ['Angular', 'TypeScript', 'HTML', 'CSS'],
@@ -53,6 +57,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'title' => 'Palomitas & Pixeles',
+                'image' => '/images/pixel-art-popcorn-game-asset-design-vector.jpg',
                 'summary' => 'Club de cine con buscador, lista de películas, ruleta y juego para adivinar películas.',
                 'body' => 'Aplicación Laravel con autenticación propia y consumo de la API de TMDB. Permite buscar películas, guardarlas como pendientes o vistas, puntuarlas y reseñarlas. Incluye una ruleta para elegir qué ver y un juego de 10 rondas para adivinar la película por su carátula, con puntuación guardada.',
                 'tech_stack' => ['Laravel', 'PHP', 'SQLite', 'Tailwind CSS', 'TMDB API'],

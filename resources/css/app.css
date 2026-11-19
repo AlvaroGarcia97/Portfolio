@@ -6,4 +6,108 @@
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Arial Narrow', Impact, Haettenschweiler, sans-serif;
+    --color-paper: #ffffff;
+    --color-ink: #2c2c2c;
+    --color-mist: #cbcbcb;
+}
+
+.titulo-gigante {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+}
+
+.titulo-gigante--gris {
+    color: #6b6b6b;
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+    text-transform: none;
+}
+
+.titulo-gigante--seccion {
+    font-size: clamp(2.5rem, 7vw, 6rem);
+}
+
+.mosaicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mosaico {
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 9px 21px rgb(0 0 0 / 0.10), 0 38px 38px rgb(0 0 0 / 0.09), 0 85px 51px rgb(0 0 0 / 0.05);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    transition: transform 0.4s ease;
+}
+
+.mosaicos > .mosaico:not(:last-child) {
+    margin-right: -6%;
+}
+
+.mosaicos > .mosaico:nth-child(1) {
+    transform: rotate(2deg) translateY(5%);
+    z-index: 4;
+}
+
+.mosaicos > .mosaico:nth-child(2) {
+    transform: rotate(-3deg) translateY(-6%);
+    z-index: 3;
+}
+
+.mosaicos > .mosaico:nth-child(3) {
+    transform: rotate(6deg) translateY(5%);
+    z-index: 2;
+}
+
+.mosaicos > .mosaico:nth-child(4) {
+    transform: rotate(-2deg) translateY(-4%);
+    z-index: 1;
+}
+
+.mosaico:hover,
+.mosaicos > .mosaico:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.color-0 {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.color-1 {
+    background-color: #ff6b4a;
+    color: #2c2c2c;
+}
+
+.color-2 {
+    background-color: #8da2ff;
+    color: #2c2c2c;
+}
+
+.color-3 {
+    background-color: #cbcbcb;
+    color: #2c2c2c;
+}
+
+.color-4 {
+    background-color: #b9a6ff;
+    color: #2c2c2c;
+}
+
+.pie-titulo {
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 20vw, 16rem);
+    line-height: 0.75;
+    letter-spacing: -0.02em;
+    color: var(--color-paper);
+    text-transform: uppercase;
 }

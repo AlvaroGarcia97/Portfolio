@@ -8,12 +8,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $featured = Project::published()
-            ->featured()
+        $projects = Project::published()
             ->orderBy('sort_order')
-            ->take(3)
             ->get();
 
-        return view('home', compact('featured'));
+        $featured = $projects->where('featured')->take(4);
+
+        return view('home', compact('projects', 'featured'));
     }
 }

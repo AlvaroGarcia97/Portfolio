@@ -2,7 +2,8 @@
 
 return [
     'name' => 'Álvaro García Sangüesa',
-    'role' => 'Desarrollador de Aplicaciones Web',
+    'display_name' => 'Álvaro García Sangüesa',
+    'headline' => 'Desarrollador de Aplicaciones Web - alvaroogarcia97@gmail.com',
     'tagline' => 'Desarrollo web full-stack · Java, PHP/Laravel y Angular',
     'email' => 'alvaroogarcia97@gmail.com',
     'github' => 'https://github.com/AlvaroGarcia97',
