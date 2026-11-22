@@ -5,19 +5,13 @@
 @section('content')
     <section class="flex min-h-screen flex-col items-center justify-center gap-24 px-4 py-24 text-center sm:gap-32">
         <div class="mosaicos">
-            @foreach ($featured as $proyecto)
-                <div class="mosaico color-{{ $loop->index % 5 }} w-28 sm:w-44">
-                    @if ($proyecto->image)
-                        <img src="{{ $proyecto->image }}" alt="{{ $proyecto->title }}" class="h-full w-full rounded-2xl object-cover">
-                    @else
-                        <span>{{ mb_strtoupper(mb_substr($proyecto->title, 0, 1)) }}</span>
-                    @endif
-                </div>
+            @foreach (['nube-roja.jpg', 'bleach-shinigami.jpg', 'estrella.jpg'] as $imagen)
+                <img src="{{ asset('images/'.$imagen) }}" alt="" class="w-36 object-contain sm:w-56">
             @endforeach
         </div>
 
         <div class="flex flex-col gap-3">
-            <h1 class="titulo-gigante">{{ config('portfolio.display_name') }}</h1>
+            <h1 class="titulo-gigante titulo-gigante--nombre">{{ config('portfolio.display_name') }}</h1>
             <h2 class="titulo-gigante titulo-gigante--gris">{{ config('portfolio.headline') }}</h2>
             <a href="{{ route('about') }}" class="mt-2 text-xs uppercase tracking-[0.2em] text-ink/60 underline underline-offset-4 transition hover:text-ink">
                 Sobre mí

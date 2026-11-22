@@ -11,10 +11,8 @@
             <h1 class="titulo-gigante titulo-gigante--seccion">{{ $project->title }}</h1>
             <p class="mt-4 text-lg text-ink/60">{{ $project->summary }}</p>
         </header>
-
-        @if ($project->image)
-            <img src="{{ $project->image }}" alt="{{ $project->title }}" class="mt-10 w-full rounded-2xl border border-ink/10 object-cover">
-        @endif
+        
+       
 
         @if (! empty($project->tech_stack))
             <ul class="mt-8 flex flex-wrap gap-2">
